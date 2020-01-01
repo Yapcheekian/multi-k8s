@@ -11,6 +11,6 @@ docker push yapcheekian/multi-server:$SHA
 docker push yapcheekian/multi-worker:$SHA
 
 kubectl apply -f k8s
-#kubectl set image deployments/server-deployment server=yapcheekian/multi-server:$SHA
-#kubectl set image deployments/client-deployment web=yapcheekian/multi-client:$SHA
-#kubectl set image deployments/worker-deployment worker=yapcheekian/multi-worker:$SHA
+kubectl set image deployments/server-deployment server=yapcheekian/multi-server:$SHA
+kubectl set image deployments/client-deployment web=yapcheekian/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=yapcheekian/multi-worker:$SHA
